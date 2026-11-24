@@ -1,0 +1,84 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.text p {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  max-width: 60ch;
+}
+
+.text p:first-child {
+  color: var(--text);
+  font-size: 1.12rem;
+}
+
+.moreButton {
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.moreButton:hover {
+  transform: translateX(6px);
+  opacity: 0.85;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    translate 0.3s ease;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  border-color: rgba(110, 231, 183, 0.4);
+  translate: 0 -4px;
+}
+
+.icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.cardText {
+  color: var(--text-muted);
+  font-size: 0.93rem;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

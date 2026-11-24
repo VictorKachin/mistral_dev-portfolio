@@ -1,0 +1,125 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(32px) scale(0.98);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    translate 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.card:hover {
+  translate: 0 -6px;
+  border-color: rgba(129, 140, 248, 0.45);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
+}
+
+.cover {
+  position: relative;
+  height: 160px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.25), transparent 55%);
+}
+
+.coverIcon {
+  font-size: 3rem;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .coverIcon {
+  transform: scale(1.25) rotate(-8deg);
+}
+
+.coverActions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 16px;
+  opacity: 0;
+  translate: 0 8px;
+  transition: opacity 0.35s ease, translate 0.35s ease;
+}
+
+.card:hover .coverActions {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.coverLink {
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0b0e14;
+  background: rgba(255, 255, 255, 0.92);
+  transition: transform 0.25s ease;
+}
+
+.coverLink:hover {
+  transform: scale(1.06);
+}
+
+.body {
+  padding: 24px;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  margin-bottom: 18px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: rgba(110, 231, 183, 0.08);
+  border: 1px solid rgba(110, 231, 183, 0.2);
+}
+
+@media (max-width: 820px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
