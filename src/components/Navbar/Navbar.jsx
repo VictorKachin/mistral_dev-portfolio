@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { navLinks } from '../../data/content';
 import { useActiveSection } from '../../hooks/useActiveSection';
 import { useScrollTo } from '../../hooks/useScrollTo';
+import { useTheme } from '../../hooks/useTheme';
 import styles from './Navbar.module.css';
 
 const sectionIds = navLinks.map((link) => link.id);
@@ -11,6 +12,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const activeId = useActiveSection(sectionIds);
   const scrollTo = useScrollTo();
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -45,6 +47,16 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        <button
+          type="button"
+          className={styles.toggle}
+          onClick={toggle}
+          aria-label={theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему'}
+          title={theme === 'dark' ? 'Светлая тема' : 'Тёмная тема'}
+        >
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
 
         <button
           type="button"

@@ -26,15 +26,15 @@
   border-radius: 12px;
   font-weight: 700;
   font-size: 1.05rem;
-  color: #0b0e14;
+  color: var(--on-accent);
   background: var(--gradient);
-  box-shadow: 0 10px 30px rgba(110, 231, 183, 0.22);
+  box-shadow: var(--shadow-soft);
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
 }
 
 .emailButton:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 16px 44px rgba(110, 231, 183, 0.32);
+  box-shadow: var(--shadow-lg);
 }
 
 .links {
