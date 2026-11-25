@@ -96,25 +96,6 @@
 @media (max-width: 640px) {
   .timeline {
     padding-left: 36px;
-    list-style: none;
-    counter-reset: item;
-  }
-
-  .item {
-    counter-increment: item;
-  }
-
-  .item::before {
-    content: counter(item);
-    position: absolute;
-    left: -8px;
-    top: 8px;
-    width: 16px;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-align: center;
-    color: var(--text-muted);
   }
 
   .dot {
