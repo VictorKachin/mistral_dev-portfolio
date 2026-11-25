@@ -101,4 +101,8 @@
   .dot {
     left: -34px;
   }
+
+  .point::before {
+    left: 4px;
+  }
 }
