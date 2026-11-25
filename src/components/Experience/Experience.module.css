@@ -9,7 +9,7 @@
   position: absolute;
   top: 12px;
   bottom: 12px;
-  left: -7px;
+  left: 7px;
   width: 2px;
   background: linear-gradient(
     to bottom,
@@ -99,6 +99,6 @@
   }
 
   .dot {
-    left: -36px;
+    left: -20px;
   }
 }
