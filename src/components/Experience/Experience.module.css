@@ -107,9 +107,9 @@
   .item::before {
     content: counter(item);
     position: absolute;
-    left: -15px;
+    left: -8px;
     top: 8px;
-    width: 14px;
+    width: 16px;
     font-family: var(--font-mono);
     font-size: 0.8rem;
     font-weight: 600;
