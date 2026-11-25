@@ -1,14 +1,14 @@
 .timeline {
   position: relative;
   max-width: 760px;
-  padding-left: 32px;
+  padding-left: 48px;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  top: 6px;
-  bottom: 6px;
+  top: 12px;
+  bottom: 12px;
   left: 7px;
   width: 2px;
   background: linear-gradient(
@@ -18,7 +18,7 @@
     var(--accent-3)
   );
   border-radius: 2px;
-  opacity: 0.5;
+  opacity: 0.45;
 }
 
 .item {
@@ -32,14 +32,14 @@
 
 .dot {
   position: absolute;
-  left: -32px;
+  left: -48px;
   top: 7px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: var(--bg);
   border: 3px solid var(--accent);
-  box-shadow: 0 0 0 4px rgba(110, 231, 183, 0.15);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent);
   animation: pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
@@ -91,4 +91,14 @@
   position: absolute;
   left: 0;
   color: var(--accent-2);
+}
+
+@media (max-width: 640px) {
+  .timeline {
+    padding-left: 36px;
+  }
+
+  .dot {
+    left: -36px;
+  }
 }
