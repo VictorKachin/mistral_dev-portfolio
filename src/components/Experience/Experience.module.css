@@ -97,4 +97,8 @@
   .timeline {
     padding-left: 36px;
   }
+
+  .dot {
+    left: -36px;
+  }
 }
