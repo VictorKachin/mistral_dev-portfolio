@@ -98,7 +98,7 @@
     padding-left: 36px;
   }
 
-  .dot {
-    left: -20px;
+  .timeline::before {
+    left: 3px;
   }
 }
