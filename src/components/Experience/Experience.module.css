@@ -32,14 +32,13 @@
 
 .dot {
   position: absolute;
-  left: -48px;
-  top: 7px;
-  width: 16px;
-  height: 16px;
+  left: -32px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--bg);
   border: 3px solid var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent);
   animation: pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
@@ -99,6 +98,6 @@
   }
 
   .dot {
-    left: -36px;
+    left: -20px;
   }
 }
