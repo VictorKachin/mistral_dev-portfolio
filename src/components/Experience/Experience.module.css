@@ -97,8 +97,4 @@
   .timeline {
     padding-left: 36px;
   }
-
-  .timeline::before {
-    left: 3px;
-  }
 }
